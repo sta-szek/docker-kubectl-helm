@@ -23,4 +23,6 @@ RUN \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     apk del build_deps
 
+COPY config /root/.kube/config
+
 CMD bash
