@@ -3,23 +3,23 @@ kind: Config
 
 clusters:
 - cluster:
-    certificate-authority-data: ${cluster_certificate_authority_data}
-    server: ${cluster_server}
-  name: ${cluster_name}
+    certificate-authority-data: ${bamboo_cluster_certificate_authority_data}
+    server: ${bamboo_cluster_server}
+  name: ${bamboo_cluster_name}
 
 contexts:
 - context:
-    cluster: ${cluster_name}
-    namespace: ${cluster_namespace}
-    user: ${cluster_name}
-  name: ${cluster_name}
+    cluster: ${bamboo_cluster_name}
+    namespace: ${bamboo_cluster_namespace}
+    user: ${bamboo_cluster_name}
+  name: ${bamboo_cluster_name}
 
-current-context: ${cluster_name}
+current-context: ${bamboo_cluster_name}
 
 users:
-- name: ${cluster_name}
+- name: ${bamboo_cluster_name}
   user:
-    client-certificate-data: ${user_client_certificate_data}
-    client-key-data: ${user_client_key_data}
-    password: ${user_password}
-    username: ${user_name}
+    client-certificate-data: ${bamboo_user_client_certificate_data}
+    client-key-data: ${bamboo_user_client_key_data}
+    password: ${bamboo_user_password}
+    username: ${bamboo_user_name}
