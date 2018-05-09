@@ -14,6 +14,7 @@ RUN apk add --update ca-certificates openssl curl bash git openssh \
     && chmod 700 get_helm.sh \
     && ./get_helm.sh &> /dev/null \
     && helm init --client-only \
+    && helm version --client \
     && rm /var/cache/apk/* \
     && rm -rf /tmp/*
 
